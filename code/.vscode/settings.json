@@ -1,0 +1,8 @@
+{
+    "go.alternateTools": {
+        "dlv": "/usr/local/bin/dlv",
+        "go": "/usr/local/bin/go"
+    },
+    "go.gopath": "/Users/anuragtomer/src/goCode/golib:/Users/anuragtomer/src/goCode/code",
+    "go.goroot": "/usr/local/go"
+}
