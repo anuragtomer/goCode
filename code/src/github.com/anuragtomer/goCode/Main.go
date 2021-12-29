@@ -2,7 +2,8 @@ package main
 
 func main() {
 	// datatypes()
-	constants()
+	// constants()
+	arrayUsecase()
 }
 
 // go run <filename>

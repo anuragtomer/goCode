@@ -20,7 +20,8 @@ func constants() {
 	// fmt.Printf("%v\n", a1+b1) // Doesn't work. Mismatch between int and int16
 	// enumeratedConstants()
 	// writeOnly()
-	FileSize()
+	// FileSize()
+	roles()
 }
 
 // Enumerated Constants
@@ -67,4 +68,20 @@ func FileSize() {
 	fmt.Printf("%.2fGB\n", fileSize/GB)
 }
 
-// 1:41:13
+const (
+	isAdmin = 1 << iota
+	isHeadquarters
+	canSeeFinancials
+	canSeeAfrica
+	canSeeAsia
+	canSeeEurope
+	canSeeNorthAmerica
+	conSeeSouthAmerica
+)
+
+func roles() {
+	var roles byte = isAdmin | canSeeFinancials | canSeeEurope
+	fmt.Printf("Roles: %b\n", roles)
+	fmt.Printf("Is Admin? %v\n", roles&isAdmin == isAdmin)
+	fmt.Printf("Is Headquarters? %v\n", roles&isHeadquarters == isHeadquarters)
+}
